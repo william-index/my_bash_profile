@@ -54,35 +54,21 @@ prompt_git() {
     fi;
 }
 
-if tput setaf 1 &> /dev/null; then
-    tput sgr0; # reset colors
-    bold=$(tput bold);
-    reset=$(tput sgr0);
-    # Solarized colors, taken from http://git.io/solarized-colors.
-    black=$(tput setaf 0);
-    blue=$(tput setaf 33);
-    cyan=$(tput setaf 37);
-    green=$(tput setaf 64);
-    orange=$(tput setaf 166);
-    purple=$(tput setaf 125);
-    red=$(tput setaf 124);
-    violet=$(tput setaf 61);
-    white=$(tput setaf 15);
-    yellow=$(tput setaf 136);
-else
-    bold='';
-    reset="\e[0m";
-    black="\e[1;30m";
-    blue="\e[1;34m";
-    cyan="\e[1;36m";
-    green="\e[1;32m";
-    orange="\e[1;33m";
-    purple="\e[1;35m";
-    red="\e[1;31m";
-    violet="\e[1;35m";
-    white="\e[1;37m";
-    yellow="\e[1;33m";
-fi;
+tput sgr0; # reset colors
+bold=$(tput bold);
+reset=$(tput sgr0);
+# color reference: https://i.stack.imgur.com/a2S4s.png
+black=$(tput setaf 0);
+blue=$(tput setaf 33);
+cyan=$(tput setaf 115);
+green=$(tput setaf 106);
+orange=$(tput setaf 166);
+purple=$(tput setaf 125);
+red=$(tput setaf 125);
+violet=$(tput setaf 61);
+white=$(tput setaf 15);
+yellow=$(tput setaf 226);
+pink=$(tput setaf 213);
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
@@ -101,10 +87,10 @@ fi;
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline
-PS1+="\[${purple}\]\w"; # working directory
+PS1+="\[${cyan}\]\w"; # working directory
 PS1+="\$(prompt_git \"${white} on ${yellow}\")"; # Git repository details
 PS1+="\n";
-PS1+="\[${purple}\]💛 💛 💛  ~ \[${reset}\]"; # `heart` (and reset color)
+PS1+="\[${pink}\]💛  🦄  💛  ~ \[${reset}\]"; # `heart` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";

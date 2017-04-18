@@ -4,15 +4,15 @@
 ## it is committed here just for reference
 
 #   Simple Aliases
-. ~/bash_scripts/scripts/aliases.sh
+. ~/my_bash_profile/scripts/aliases.sh
 
 # Imports for Project workflows
-. ~/bash_scripts/scripts/morning-start.sh
-. ~/bash_scripts/scripts/bash-styling.sh
-. ~/bash_scripts/scripts/extract.sh
+. ~/my_bash_profile/scripts/morning-start.sh
+. ~/my_bash_profile/scripts/bash-styling.sh
+. ~/my_bash_profile/scripts/extract.sh
 
 # GIT COMPLETION
-. ~/bash_scripts/utilities/git-completion.bash
+. ~/my_bash_profile/utilities/git-completion.bash
 
 # Set default paths
 export EDITOR=atom

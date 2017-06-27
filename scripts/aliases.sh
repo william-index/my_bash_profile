@@ -26,6 +26,7 @@ ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in Ma
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 alias what_gaes='ps aux | grep dev_app'
 alias http='python -m SimpleHTTPServer 8000'
+killport () { lsof -t -i tcp:$1 | xargs kill -9; }
 
 # preprocessors
 alias pyscss='python -mscss <'

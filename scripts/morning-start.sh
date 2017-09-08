@@ -5,7 +5,6 @@ morning(){
   open -a "Google Chrome" "https://www.google.com/calendar/"
 
   # applications
-  open -a "hipchat"
   open -a "slack"
   open -a "twitter"
 

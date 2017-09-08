@@ -27,6 +27,7 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 alias what_gaes='ps aux | grep dev_app'
 alias http='python -m SimpleHTTPServer 8000'
 killport () { lsof -t -i tcp:$1 | xargs kill -9; }
+alias virtualenv3='virtualenv -p python3'
 
 # preprocessors
 alias pyscss='python -mscss <'

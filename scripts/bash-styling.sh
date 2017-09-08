@@ -54,6 +54,14 @@ prompt_git() {
     fi;
 }
 
+parse_venv() {
+  if [[ $VIRTUAL_ENV != "" ]]; then
+    echo "${VIRTUAL_ENV##*/}"
+  else
+    return;
+  fi
+}
+
 tput sgr0; # reset colors
 bold=$(tput bold);
 reset=$(tput sgr0);

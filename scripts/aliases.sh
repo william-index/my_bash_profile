@@ -32,6 +32,8 @@ alias virtualenv3='virtualenv -p python3'
 # preprocessors
 alias pyscss='python -mscss <'
 
+alias love="/Applications/love.app/Contents/MacOS/love"
+
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'

@@ -1,0 +1,16 @@
+#   Simple Aliases
+. ~/Repos/my_bash_profile/scripts/aliases.sh
+
+# Imports for Project workflows
+. ~/Repos/my_bash_profile/scripts/morning-start.sh
+. ~/Repos/my_bash_profile/scripts/bash-styling.sh
+. ~/Repos/my_bash_profile/scripts/extract.sh
+
+# GIT COMPLETION
+# zstyle ':completion:*:*:git:*' script ~/Repos/my_bash_profile/utilities/git-completion.zsh
+fpath=(~/.zsh $fpath)
+
+autoload -Uz compinit && compinit
+
+# Set default paths
+export EDITOR=atom
